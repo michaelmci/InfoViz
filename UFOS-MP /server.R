@@ -106,8 +106,8 @@ shinyServer(function(input, output) {
     temp <- dataset %>%
       group_by(year, month, day) %>%
       summarise(event_count = n())
-     
-  
+    
+    
     
     x <- input$radio1
     data <- temp[which(temp$year %in% x),]
@@ -148,10 +148,20 @@ shinyServer(function(input, output) {
     
     x <- input$radio2
     data <- temp[which(temp$year %in% x),]
+    
+    # substitute missing values with zeros (a missing value corresponds to an event that never took place)
+    for (m in c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")){
+      for (h in c("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23")){
+        row_to_find <- data.frame(year=x, month=m, hour=h)
+        if(nrow(merge(row_to_find,data))==0){
+          data[nrow(data) + 1,] = list(x, m, h, 0)
+        }
+      }
+    }
+    
     return(data)
     
   })
-  
   output$heatmap2 <- renderPlotly({
     
     x <- list(
