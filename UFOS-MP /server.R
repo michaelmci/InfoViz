@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
   )
   
   output$usairports <- DT::renderDataTable(
-    DT::datatable(na.omit(read.csv("airport-codes.csv")), options = list(pageLength = 10), rownames = FALSE)
+    DT::datatable(read.csv("airport-codes.csv"), options = list(pageLength = 10), rownames = FALSE)
   )
   
   output$map <- renderPlot({
