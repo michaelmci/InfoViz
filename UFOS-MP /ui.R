@@ -48,24 +48,24 @@ body = dashboardBody(
                 type="tabs",
                 tabPanel(p(icon("fas fa-map-marker"), "Map Visualization"),
                          fluidRow(
-                           column(12,h3("Is there any correlation between ....?"), align = "center")
+                           column(12,h3("Is there any spatial/geographical pattern of the UFO sightings? Is this pattern the same for every shape or it varies?"), align = "center")
                          ),
                            fluidRow(
                              column(3, box(
                                status = "primary",
                                width = "12",
                                solidHeader = T,
-                               helpText("Create demographic maps with information from the 2010 US Census."),
+                               helpText("Create demographic maps with information from the UFO sightnings in the US and the shapes of the UFOs."),
                                selectInput("var",
                                            label= c("Choose the shape to display"),
-                                           choices = list ("Percent Changing","Percent Chevron", "Percent Cigar", 
+                                           choices = list ("Percent All", "Percent Changing","Percent Chevron", "Percent Cigar", 
                                                            "Percent Circle", "Percent Cone", "Percent Cross", 
                                                            "Percent Cylinder", "Percent Diamond", "Percent Disk",
                                                            "Percent Egg", "Percent Fireball", "Percent Flash",
                                                            "Percent Formation", "Percent Light", "Percent Other",
                                                            "Percent Oval", "Percent Rectangle", "Percent Sphere",
                                                            "Percent Teardrop","Percent Triangle","Percent Unknown"), 
-                                           selected = "Percent Cylinder"),
+                                           selected = "Percent Circle"),
                                sliderInput("range", 
                                            label="Range of interest:", 
                                            min= 0, max= 100, value = c(0,100))
@@ -80,11 +80,11 @@ body = dashboardBody(
                   ),
                 tabPanel(p(icon("fas fa-map"), "Heatmap Visualization"),
                          fluidRow(
-                           column(12,h3("Is there any correlation between ....?"), align = "center")
+                           column(12,h3("Are there any trends in UFO sightings over time?"), align = "center")
                          ),
                            fluidRow(
                              box(
-                               h4("bla bla bla", align = "center"),
+                               h4("Sightings by month and day", align = "center"),
                                column(3, radioButtons("radio1", label = h5("Year of appearance:"),
                                                       choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014), 
                                                       selected = 2010)),
@@ -97,7 +97,7 @@ body = dashboardBody(
                          fluidRow(
                            
                            box(
-                             h4("bla bla bla", align = "center"),
+                             h4("Sightings by month and hour of the day", align = "center"),
                              column(3, radioButtons("radio2", label = h5("Year of appearance:"),
                                                     choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014), 
                                                     selected = 2010)),
@@ -110,7 +110,7 @@ body = dashboardBody(
                 ),
                 tabPanel(p(icon("area-chart"), "Bubble Chart Visualization"),
                          fluidRow(
-                           column(12,h3("Is there any correlation between ....?"), align = "center")
+                           column(12,h3("Is there any correlation between the UFO sights or its duration and number of airports in each state?"), align = "center")
                          ),
                          fluidRow(
                            column(12, box(
