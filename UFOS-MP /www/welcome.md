@@ -39,6 +39,21 @@ This dataset contains over 22,000 reports of UFO sightings in USA over the last 
 *  **latitude**: Latitude coordinate of the sighting
 *  **longitude**: Longitude coordinate of the sighting
 
+## About Airports dataset
+This dataset contains over 22,000 reports of UFO sightings in USA over the last century. It is conformed by the following variables:  
+
+* **id**: Identification code of the airport inside the dataset 
+*  **type**: Type of the Airport regarding its size (Small, Medium and Large only)
+*  **name**: Oficial name of the airport
+*  **elevation**: Elevation of the airport from the average level sea in feets.
+*  **continent**: Continent where the aiport is located
+*  **region**: Region where the aiport is located
+*  **municipality**: Municipality where the aiport is located
+*  **GPS Code**: Code identifying the airport. 
+*  **IATA Code**: Code identifying the airport. 
+*  **local Code**: Code identifying the airport. 
+*  **coordinates**: Latitude and longitude where the airport is located. 
+
 ## Packages and libraries
 This Shiny app uses several functions from a large quantity of packages. So in order for this app to work the next packages have to be install:
 

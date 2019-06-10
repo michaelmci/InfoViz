@@ -110,7 +110,7 @@ body = dashboardBody(
                 ),
                 tabPanel(p(icon("area-chart"), "Bubble Chart Visualization"),
                          fluidRow(
-                           column(12,h3("Is there any correlation between the UFO sights or its duration and number of airports in each state?"), align = "center")
+                           column(12,h3("Is there any relation between the number of airports and the number of UFO sights in each state? Is the duration of the UFO sights anyhow related?"), align = "center")
                          ),
                          fluidRow(
                            column(12, box(

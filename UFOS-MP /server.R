@@ -21,7 +21,8 @@ shinyServer(function(input, output) {
   
   output$map <- renderPlot({
     
-    data <- switch(input$var, 
+    data <- switch(input$var,
+                   "Percent All" = ufos.grouped$all,
                    "Percent Changing" = ufos.grouped$changing,
                    "Percent Chevron" = ufos.grouped$chevron,
                    "Percent Cigar" = ufos.grouped$cigar,
@@ -44,7 +45,8 @@ shinyServer(function(input, output) {
                    "Percent Triangle" = ufos.grouped$triangle,
                    "Percent Unknown" = ufos.grouped$unknown)
     
-    color <- switch(input$var, 
+    color <- switch(input$var,
+                    "Percent All" = "blue",
                     "Percent Changing" = "darkblue",
                     "Percent Chevron" = "darkgreen",
                     "Percent Cigar" = "darkmagenta",
@@ -67,8 +69,9 @@ shinyServer(function(input, output) {
                     "Percent Triangle" = "purple3",
                     "Percent Unknown" = "lightseagreen")
     legend <- switch(input$var, 
+                     "Percent All" ="% UFO Sighs",
                      "Percent Changing" = "% Changing",
-                     "Percent Chevron" = "% Chevron",
+                     "Percent Chevron" = "% Chevron", 
                      "Percent Cigar" = "% Cigar",
                      "Percent Circle" = "% Circle",
                      "Percent Cone" = "% Cone",
@@ -129,7 +132,7 @@ shinyServer(function(input, output) {
       z = dataset.heatmap.1()$event_count, 
       
       type = "heatmap"
-    )%>% layout(title = "Heatmap of bla bla bla", xaxis = x, yaxis = y)
+    )%>% layout(title = "Heatmap of UFO Sightings in the US", xaxis = x, yaxis = y)
     
   })
   
@@ -176,7 +179,7 @@ shinyServer(function(input, output) {
       z = dataset.heatmap.2()$event_count,
       
       type = "heatmap"
-    )%>% layout(title = "Heatmap 2 of bla bla bla", xaxis = x, yaxis = y)
+    )%>% layout(title = "Heatmap of UFO Sightings in the US", xaxis = x, yaxis = y)
     
     
   })
