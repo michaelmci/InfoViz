@@ -40,7 +40,7 @@ This dataset contains over 22,000 reports of UFO sightings in USA over the last 
 *  **longitude**: Longitude coordinate of the sighting
 
 ## About Airports dataset
-This dataset contains over 22,000 reports of UFO sightings in USA over the last century. It is conformed by the following variables:  
+This dataset contains over 55000 items, including all the airports in the world, defined by the 16 following attributes::  
 
 * **id**: Identification code of the airport inside the dataset 
 *  **type**: Type of the Airport regarding its size (Small, Medium and Large only)
