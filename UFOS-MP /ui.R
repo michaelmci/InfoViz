@@ -86,7 +86,7 @@ body = dashboardBody(
                              box(
                                h4("Sightings by month and day", align = "center"),
                                column(3, radioButtons("radio1", label = h5("Year of appearance:"),
-                                                      choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014), 
+                                                      choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013), 
                                                       selected = 2010)),
                                column(9, withSpinner(plotlyOutput("heatmap1"))),
                                status = "primary",
@@ -99,7 +99,7 @@ body = dashboardBody(
                            box(
                              h4("Sightings by month and hour of the day", align = "center"),
                              column(3, radioButtons("radio2", label = h5("Year of appearance:"),
-                                                    choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014), 
+                                                    choices = list("2010" = 2010, "2011" = 2011, "2012" = 2012, "2013" = 2013), 
                                                     selected = 2010)),
                              column(9, withSpinner(plotlyOutput("heatmap2"))),
                              status = "primary",

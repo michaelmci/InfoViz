@@ -1,6 +1,5 @@
 <link href="styleMD.css" rel="stylesheet"></link>
 # Welcome to UFO Sightings Shiny app! 
-The authors of this shiny app  are:
 
 <div class="center-block row" >
 
@@ -14,16 +13,18 @@ The authors of this shiny app  are:
   </div>
 </div> 
 
+* These are the authors of this project which is available in  [**the following repository**](https://github.com/michaelmci/InfoViz)
+
 ## About UFO Sightings Shiny app
 This Shiny applications provides a friendly interface to let the users explore and analyse UFO Sightings dataset. The different features are separated by the following tabs:  
 
 *  **Dataset**: This tab presents the two datasets used for the analysis. It is conformed by two subtabs:
-  * **UFOs Dataset**: 
-  * **Airports Dataset**: 
+  * **UFOs Dataset** 
+  * **Airports Dataset**
 *  **Data Exploration**: This tab allows the user to explore the different variables of the dataset as well as the relationship between themselves. It is conformed by three subtabs:
-  * **Map Visualization**: 
-  * **Heatmap Visualization**: 
-  * **Bubble Chart Visualization**:
+  * **Map Visualization**
+  * **Heatmap Visualization**
+  * **Bubble Chart Visualization**
  
 
 ## About UFO Sightings dataset
