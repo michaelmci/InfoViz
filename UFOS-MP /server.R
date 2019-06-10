@@ -213,7 +213,7 @@ shinyServer(function(input, output) {
     
     sight_duration_per_state <- ufos %>%
       group_by(state) %>%
-      summarise(avg_duration_sec = median(duration..seconds., na.rm = T))
+      summarise(med_duration_sec = median(duration..seconds., na.rm = T))
     
     dataset <- merge(airports_per_state, sight_duration_per_state, by = "state")
     dataset <- merge(dataset, sights_per_state, by = "state")
@@ -223,8 +223,8 @@ shinyServer(function(input, output) {
   
   output$bubble_chart <- renderPlotly({
     
-    plot_ly(dataset.bubble(), x = ~no_sights, y = ~no_airports, text = ~state, type = 'scatter', mode = 'markers', color = ~avg_duration_sec, colors = 'Reds',
-            marker = list(size = ~(avg_duration_sec/8), opacity = 10)) %>%
+    plot_ly(dataset.bubble(), x = ~no_sights, y = ~no_airports, text = ~state, type = 'scatter', mode = 'markers', color = ~med_duration_sec, colors = 'Reds',
+            marker = list(size = ~(med_duration_sec/8), opacity = 10)) %>%
       layout(title = 'Relation between UFO sights and the number of airports per state',
              xaxis = list(showgrid = FALSE),
              yaxis = list(showgrid = FALSE))
